@@ -27,7 +27,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 ">
       <div className="container mx-auto px-6 lg:px-20">
         <h2 className="text-4xl font-bold text-gray-800 text-center mb-10">
           Our Services

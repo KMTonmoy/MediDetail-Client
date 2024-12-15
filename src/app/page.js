@@ -1,18 +1,23 @@
 import AboutSection from "@/Components/AboutSection";
 import Banner from "@/Components/Banner";
-import FeaturesSection from "@/Components/FeaturesSectio";
 import ServicesSection from "@/Components/ServicesSection";
 import TestimonialsSection from "@/Components/TestimonialsSection";
+
+import FAQsSection from "@/Components/FAQsSection";
+import ContactUsSection from "@/Components/ContactUsSection";
+import GallerySection from "@/Components/GallerySection";
 
 const page = () => {
   return (
     <div>
       <div>
         <Banner></Banner>
-        <FeaturesSection />
+        <ServicesSection />
         <AboutSection />
-        <ServicesSection/>
-      <TestimonialsSection/>
+        <GallerySection />
+        <TestimonialsSection />
+        <FAQsSection />
+        <ContactUsSection />
       </div>
     </div>
   );

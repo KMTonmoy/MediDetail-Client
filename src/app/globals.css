@@ -33,3 +33,7 @@ h6 {
 button {
   font-family: "Inter", sans-serif;
 }
+
+ body{
+  bg: #FFFFFF;
+ }

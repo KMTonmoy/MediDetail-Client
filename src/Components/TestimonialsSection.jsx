@@ -7,26 +7,29 @@ const TestimonialsSection = () => {
       role: "General Practitioner",
       feedback:
         "This platform has revolutionized how I guide my patients. The ease of access to medical details and monitoring tools is simply outstanding!",
-      image: "https://via.placeholder.com/100", // Replace with real image URL
+      image:
+        "https://centerforsightswfl.com/wp-content/uploads/2022/04/CFS_SAJ-2.png",
     },
     {
       name: "Mr. John Doe",
       role: "Health Enthusiast",
       feedback:
         "I’ve gained so much confidence in managing my health. The detailed insights and user-friendly interface are game-changers.",
-      image: "https://via.placeholder.com/100", // Replace with real image URL
+      image:
+        "https://chetanyacareers.com/events/wp-content/uploads/2017/10/speaker3-min.jpg",
     },
     {
       name: "Ms. Emily Carter",
       role: "Nutritionist",
       feedback:
         "The resources available here are unmatched. It's a great platform for anyone looking to improve their health management.",
-      image: "https://via.placeholder.com/100", // Replace with real image URL
+      image:
+        "https://healthsystem.osumc.edu/digitalservices/api/v1/ProviderPicture/6861",
     },
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16  ">
       <div className="container mx-auto px-6 lg:px-20">
         <h2 className="text-4xl font-bold text-gray-800 text-center mb-10">
           What Our Users Say

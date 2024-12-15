@@ -3,7 +3,7 @@ import React from "react";
 // Removed framer-motion for simpler static design
 const FeaturesSectio = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 ">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-extrabold text-gray-800 mb-10">
           Amazing Features

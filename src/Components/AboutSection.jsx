@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16  ">
       <div className="container mx-auto px-6 lg:px-20">
         <div className="flex flex-col lg:flex-row items-center lg:items-start">
           {/* Left Side: Text Content */}
@@ -25,7 +25,7 @@ const AboutSection = () => {
           {/* Right Side: Image */}
           <div className="lg:w-1/2 lg:pl-12 mt-8 lg:mt-0">
             <img
-              src="https://via.placeholder.com/500"
+              src="https://img.freepik.com/free-photo/team-young-specialist-doctors-standing-corridor-hospital_1303-21199.jpg?semt=ais_hybrid"
               alt="About Us"
               className="rounded-lg shadow-lg"
             />

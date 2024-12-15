@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,13 +53,17 @@ const Navbar = () => {
           </motion.li>
         </motion.ul>
 
-        <motion.button
-          className="hidden md:block bg-green-600 text-white px-6 py-2 rounded-full shadow-lg hover:bg-green-700 transition duration-300"
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.3 }}
-        >
-          Get Started
-        </motion.button>
+        <div className="flex gap-5">
+        <Link href="register">
+          <motion.button
+            className="hidden md:block bg-green-600 text-white px-6 py-2 rounded-full shadow-lg hover:bg-green-700 transition duration-300"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
+          >
+            Register
+          </motion.button>
+          </Link>
+        </div>
 
         <div
           className="md:hidden text-green-700 cursor-pointer"
@@ -82,15 +87,50 @@ const Navbar = () => {
             ✕
           </button>
         </div>
-        <ul className="space-y-6 text-center mt-10">
-          <li className="hover:text-green-700 cursor-pointer">Home</li>
-          <li className="hover:text-green-700 cursor-pointer">About</li>
-          <li className="hover:text-green-700 cursor-pointer">Services</li>
-          <li className="hover:text-green-700 cursor-pointer">Contact</li>
-          <button className="bg-green-600 text-white px-6 py-2 rounded-full shadow-lg hover:bg-green-700 transition duration-300">
-            Get Started
-          </button>
-        </ul>
+        <motion.ul
+          className="space-y-6 text-center mt-10"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <motion.li
+            className="hover:text-green-700 cursor-pointer"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
+          >
+            Home
+          </motion.li>
+          <motion.li
+            className="hover:text-green-700 cursor-pointer"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
+          >
+            About
+          </motion.li>
+          <motion.li
+            className="hover:text-green-700 cursor-pointer"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
+          >
+            Services
+          </motion.li>
+          <motion.li
+            className="hover:text-green-700 cursor-pointer"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
+          >
+            Contact
+          </motion.li>
+          <Link href="register">
+            <motion.button
+              className="bg-green-600 text-white px-6 py-2 rounded-full shadow-lg hover:bg-green-700 transition duration-300"
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.3 }}
+            >
+              Register
+            </motion.button>
+          </Link>
+        </motion.ul>
       </motion.div>
     </nav>
   );

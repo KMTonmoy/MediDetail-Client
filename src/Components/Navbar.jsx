@@ -54,14 +54,14 @@ const Navbar = () => {
         </motion.ul>
 
         <div className="flex gap-5">
-        <Link href="register">
-          <motion.button
-            className="hidden md:block bg-green-600 text-white px-6 py-2 rounded-full shadow-lg hover:bg-green-700 transition duration-300"
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.3 }}
-          >
-            Register
-          </motion.button>
+          <Link href="register">
+            <motion.button
+              className="hidden md:block bg-green-600 text-white px-6 py-2 rounded-full shadow-lg hover:bg-green-700 transition duration-300"
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.3 }}
+            >
+              Register
+            </motion.button>
           </Link>
         </div>
 

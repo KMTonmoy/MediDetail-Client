@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Welcome to Green Paradise",
+    "text": "Explore the benefits of nature-inspired medicine. Find natural remedies and treatments.",
+    "image": "https://i.ibb.co.com/tLzztpr/download-1-removebg-preview.png",
+    "bgColor": "green"
+  },
+  {
+    "id": 2,
+    "title": "Discover the Red Horizon",
+    "text": "Access powerful medications and health products to boost your vitality and strength.",
+    "image": "https://i.ibb.co.com/s1wXCBJ/maxresdefault-removebg-preview.png",
+    "bgColor": "red"
+  },
+  {
+    "id": 3,
+    "title": "Dive into the Blue Ocean",
+    "text": "Relax and rejuvenate with medicines and supplements designed to support your mental and physical well-being.",
+    "image": "https://i.ibb.co.com/BVVW4dJ/d75c7d87884541-5dc55e12b61fc-removebg-preview.png",
+    "bgColor": "blue"
+  },
+  {
+    "id": 4,
+    "title": "Sunshine in Yellow Fields",
+    "text": "Find the perfect vitamin supplements to brighten your day and boost energy levels.",
+    "image": "https://i.ibb.co.com/5jVjH3G/47b0d3102550727-5f39872bc803f-removebg-preview.png",
+    "bgColor": "yellow"
+  },
+  {
+    "id": 5,
+    "title": "Purple Dreams",
+    "text": "Discover calming and soothing herbal remedies to ease your mind and improve your sleep.",
+    "image": "https://i.ibb.co.com/vssRKvF/download-2-removebg-preview.png",
+    "bgColor": "purple"
+  },
+  {
+    "id": 6,
+    "title": "Orange Sunset",
+    "text": "Experience the healing properties of plant-based medicines for inflammation and pain relief.",
+    "image": "https://i.ibb.co.com/TmZmjxs/download-removebg-preview.png",
+    "bgColor": "orange"
+  },
+  {
+    "id": 7,
+    "title": "Pink Blossom",
+    "text": "Nourish your body with natural skin care products and treatments derived from botanical sources.",
+    "image": "https://i.ibb.co.com/tLzztpr/download-1-removebg-preview.png",
+    "bgColor": "pink"
+  },
+  {
+    "id": 8,
+    "title": "Teal Waters",
+    "text": "Explore products designed for hydration, digestion, and overall health maintenance.",
+    "image": "https://i.ibb.co.com/s1wXCBJ/maxresdefault-removebg-preview.png",
+    "bgColor": "teal"
+  },
+  {
+    "id": 9,
+    "title": "Brown Earth",
+    "text": "Reconnect with nature through earth-based remedies for your body and mind, fostering well-being from the ground up.",
+    "image": "https://i.ibb.co.com/BVVW4dJ/d75c7d87884541-5dc55e12b61fc-removebg-preview.png",
+    "bgColor": "brown"
+  },
+  {
+    "id": 10,
+    "title": "Gray Skies",
+    "text": "Find wellness solutions for cloudy days with mood-enhancing and energy-boosting treatments.",
+    "image": "https://i.ibb.co.com/5jVjH3G/47b0d3102550727-5f39872bc803f-removebg-preview.png",
+    "bgColor": "gray"
+  }
+]

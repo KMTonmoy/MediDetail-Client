@@ -1,0 +1,252 @@
+[
+  {
+    "_id": 1,
+    "name": "Paracetamol",
+    "description": "Paracetamol, also known as acetaminophen, is an over-the-counter medication used for mild to moderate pain relief and fever reduction. It is commonly used for headaches, backaches, toothaches, menstrual cramps, and colds. It works by inhibiting the production of prostaglandins, chemicals that promote inflammation, pain, and fever. Paracetamol is generally safe when taken as directed, but overdosing can cause severe liver damage. It is considered one of the safest pain relievers for use during pregnancy under medical supervision.",
+    "company": "Bristol-Myers Squibb",
+    "sideEffects": "Nausea, stomach upset, liver damage (in case of overdose).",
+    "ageRange": "1-99 years",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Acetaminophen"],
+    "uses": [
+      "Pain relief",
+      "Fever reduction",
+      "Headaches",
+      "Arthritis",
+      "Cold symptoms"
+    ],
+    "warnings": "Do not exceed recommended dose. Consult a doctor if you have liver disease or consume alcohol regularly."
+  },
+  {
+    "_id": 2,
+    "name": "Aspirin",
+    "description": "Aspirin is a nonsteroidal anti-inflammatory drug (NSAID) used to relieve pain, reduce inflammation, and lower fever. It is often used for conditions such as arthritis, muscle aches, and headaches. Low-dose aspirin is also prescribed to prevent heart attacks and strokes due to its blood-thinning properties. However, it should not be used in children with viral infections due to the risk of Reye’s syndrome, a rare but serious condition.",
+    "company": "Bayer",
+    "sideEffects": "Gastrointestinal irritation, ulcers, bleeding, tinnitus.",
+    "ageRange": "12-99 years",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Acetylsalicylic acid"],
+    "uses": ["Pain relief", "Anti-inflammatory", "Antiplatelet therapy"],
+    "warnings": "Not recommended for people with gastrointestinal problems, bleeding disorders, or allergies to NSAIDs."
+  },
+  {
+    "_id": 3,
+    "name": "Ibuprofen",
+    "description": "Ibuprofen is an NSAID commonly used to reduce inflammation, pain, and fever. It is effective in treating conditions such as arthritis, muscle pain, and menstrual cramps. Ibuprofen works by blocking the production of prostaglandins, which are responsible for pain and swelling. It is commonly available over the counter but should be used with caution in people with kidney problems, stomach ulcers, or high blood pressure.",
+    "company": "Pfizer",
+    "sideEffects": "Gastrointestinal upset, stomach ulcers, kidney damage, fluid retention.",
+    "ageRange": "6-99 years",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Ibuprofen"],
+    "uses": [
+      "Pain relief",
+      "Fever reduction",
+      "Anti-inflammatory",
+      "Arthritis",
+      "Headaches"
+    ],
+    "warnings": "Use the lowest effective dose for the shortest duration to minimize risks. Not recommended for individuals with kidney disease or gastrointestinal bleeding."
+  },
+  {
+    "_id": 4,
+    "name": "Amoxicillin",
+    "description": "Amoxicillin is a broad-spectrum antibiotic belonging to the penicillin class. It is used to treat a variety of bacterial infections including ear infections, pneumonia, urinary tract infections, and throat infections. Amoxicillin works by interfering with the ability of bacteria to form cell walls, ultimately killing the bacteria. It is generally well-tolerated but may cause allergic reactions in some individuals.",
+    "company": "GlaxoSmithKline",
+    "sideEffects": "Nausea, vomiting, diarrhea, allergic reactions (rash, anaphylaxis).",
+    "ageRange": "2-99 years",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Amoxicillin"],
+    "uses": [
+      "Antibiotic for bacterial infections",
+      "Respiratory infections",
+      "Ear infections",
+      "Urinary tract infections"
+    ],
+    "warnings": "May cause allergic reactions in individuals allergic to penicillin. Complete the full course of treatment."
+  },
+  {
+    "_id": 5,
+    "name": "Ciprofloxacin",
+    "description": "Ciprofloxacin is a fluoroquinolone antibiotic used to treat a range of bacterial infections, including urinary tract infections, respiratory infections, and skin infections. It works by inhibiting bacterial DNA replication. Ciprofloxacin should be used with caution in patients with a history of tendonitis, and it may cause dizziness, nausea, or gastrointestinal discomfort.",
+    "company": "Bayer",
+    "sideEffects": "Nausea, diarrhea, tendonitis, dizziness, allergic reactions.",
+    "ageRange": "18-99 years",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Ciprofloxacin"],
+    "uses": [
+      "Bacterial infections",
+      "Urinary tract infections",
+      "Respiratory infections",
+      "Skin infections"
+    ],
+    "warnings": "May cause tendon rupture or nerve damage. Not recommended for children under 18 years old."
+  },
+  {
+    "_id": 6,
+    "name": "Metformin",
+    "description": "Metformin is an oral medication used to manage type 2 diabetes by lowering blood glucose levels. It works by decreasing glucose production in the liver and improving insulin sensitivity. It is often the first medication prescribed for type 2 diabetes and may be combined with other medications. Metformin is usually well-tolerated, though it can cause gastrointestinal symptoms like nausea and diarrhea in some individuals.",
+    "company": "Bristol-Myers Squibb",
+    "sideEffects": "Nausea, diarrhea, stomach upset, lactic acidosis (rare).",
+    "ageRange": "10-99 years",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Metformin hydrochloride"],
+    "uses": ["Type 2 diabetes management", "Blood sugar control"],
+    "warnings": "Risk of lactic acidosis in people with kidney or liver issues. Take with food to reduce gastrointestinal upset."
+  },
+  {
+    "_id": 7,
+    "name": "Atorvastatin",
+    "description": "Atorvastatin is a statin used to lower cholesterol and reduce the risk of heart disease and stroke. It works by inhibiting HMG-CoA reductase, an enzyme involved in cholesterol production in the liver. Atorvastatin helps decrease low-density lipoprotein (LDL) cholesterol and triglycerides while increasing high-density lipoprotein (HDL) cholesterol.",
+    "company": "Pfizer",
+    "sideEffects": "Muscle pain, liver dysfunction, gastrointestinal issues, headaches.",
+    "ageRange": "18-99 years",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Atorvastatin calcium"],
+    "uses": [
+      "Lower cholesterol",
+      "Prevent heart attacks and strokes",
+      "Reduce triglyceride levels"
+    ],
+    "warnings": "Monitor liver function regularly. Avoid grapefruit juice, as it can increase the risk of side effects."
+  },
+  {
+    "_id": 8,
+    "name": "Losartan",
+    "description": "Losartan is an angiotensin II receptor blocker (ARB) used to treat high blood pressure (hypertension) and heart failure. It works by blocking the action of a hormone called angiotensin II, which causes blood vessels to constrict. By relaxing blood vessels, losartan helps lower blood pressure and improves blood flow to the heart.",
+    "company": "Merck & Co.",
+    "sideEffects": "Dizziness, low blood pressure, high potassium levels, kidney dysfunction.",
+    "ageRange": "18-99 years",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Losartan potassium"],
+    "uses": ["Hypertension", "Heart failure", "Kidney protection in diabetes"],
+    "warnings": "Monitor kidney function and potassium levels. May cause dizziness when standing up quickly."
+  },
+  {
+    "_id": 9,
+    "name": "Omeprazole",
+    "description": "Omeprazole is a proton pump inhibitor (PPI) used to reduce stomach acid production. It is commonly prescribed for conditions like gastroesophageal reflux disease (GERD), stomach ulcers, and Zollinger-Ellison syndrome. Omeprazole helps prevent damage to the esophagus and stomach lining caused by excess acid.",
+    "company": "AstraZeneca",
+    "sideEffects": "Headache, diarrhea, nausea, abdominal pain, vitamin B12 deficiency (long-term use).",
+    "ageRange": "18-99 years",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Omeprazole"],
+    "uses": [
+      "GERD",
+      "Stomach ulcers",
+      "Acid reflux",
+      "Zollinger-Ellison syndrome"
+    ],
+    "warnings": "May increase the risk of bone fractures with long-term use. Consult a doctor if you have liver disease."
+  },
+  {
+    "_id": 10,
+    "name": "Lisinopril",
+    "description": "Lisinopril is an angiotensin-converting enzyme (ACE) inhibitor used to treat high blood pressure, heart failure, and kidney disease. It works by relaxing blood vessels, improving blood flow, and reducing the heart's workload. Lisinopril is commonly prescribed after heart attacks and for managing chronic kidney disease.",
+    "company": "Merck & Co.",
+    "sideEffects": "Cough, dizziness, elevated potassium levels, kidney problems.",
+    "ageRange": "18-99 years",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Lisinopril"],
+    "uses": [
+      "Hypertension",
+      "Heart failure",
+      "Kidney protection",
+      "Post-heart attack recovery"
+    ],
+    "warnings": "May cause a persistent dry cough. Monitor kidney function and potassium levels regularly."
+  },
+  {
+    "_id": 11,
+    "name": "Levothyroxine",
+    "description": "Levothyroxine is a synthetic form of thyroid hormone used to treat hypothyroidism (underactive thyroid). It helps to restore normal levels of thyroid hormone in the body, improving metabolism, energy levels, and overall health. It is important to take levothyroxine at the same time each day and under the supervision of a doctor to ensure proper thyroid function.",
+    "company": "AbbVie",
+    "sideEffects": "Palpitations, insomnia, weight loss, anxiety, sweating.",
+    "ageRange": "1-99 years",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Levothyroxine sodium"],
+    "uses": ["Hypothyroidism", "Thyroid hormone replacement"],
+    "warnings": "Adjust dosage carefully to avoid symptoms of hyperthyroidism."
+  },
+  {
+    "_id": 12,
+    "name": "Clopidogrel",
+    "description": "Clopidogrel is an antiplatelet medication used to prevent blood clots. It is commonly prescribed to individuals who have had a heart attack, stroke, or peripheral artery disease. Clopidogrel works by preventing platelets from clumping together, thus reducing the risk of clots.",
+    "company": "Sanofi-Aventis",
+    "sideEffects": "Bleeding, bruising, rash, stomach pain.",
+    "ageRange": "18-99 years",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Clopidogrel bisulfate"],
+    "uses": [
+      "Blood clot prevention",
+      "Heart attack recovery",
+      "Stroke prevention",
+      "Peripheral artery disease"
+    ],
+    "warnings": "Monitor for signs of bleeding. Do not take with other blood thinners without doctor's approval."
+  },
+  {
+    "_id": 13,
+    "name": "Furosemide",
+    "description": "Furosemide is a diuretic (water pill) used to treat fluid retention (edema) caused by conditions like heart failure, liver disease, and kidney disease. It helps to remove excess salt and water from the body through urination, thereby reducing swelling and improving breathing.",
+    "company": "Bristol-Myers Squibb",
+    "sideEffects": "Dehydration, electrolyte imbalance, dizziness, low blood pressure.",
+    "ageRange": "18-99 years",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Furosemide"],
+    "uses": [
+      "Fluid retention",
+      "Hypertension",
+      "Heart failure",
+      "Kidney disease"
+    ],
+    "warnings": "Monitor electrolyte levels and kidney function during treatment."
+  },
+  {
+    "_id": 14,
+    "name": "Diazepam",
+    "description": "Diazepam is a benzodiazepine used to treat anxiety, muscle spasms, seizures, and alcohol withdrawal. It has a calming effect on the brain and central nervous system, which helps reduce anxiety and promote relaxation. It is also used in the treatment of panic disorders.",
+    "company": "Roche",
+    "sideEffects": "Drowsiness, dizziness, tiredness, memory problems, addiction.",
+    "ageRange": "18-99 years",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Diazepam"],
+    "uses": ["Anxiety", "Muscle spasms", "Seizures", "Alcohol withdrawal"],
+    "warnings": "Risk of dependence and overdose. Use for the shortest duration possible."
+  },
+  {
+    "_id": 15,
+    "name": "Prednisone",
+    "description": "Prednisone is a corticosteroid used to reduce inflammation and treat various conditions, including allergies, arthritis, asthma, and autoimmune diseases. It works by suppressing the immune system and reducing swelling and pain.",
+    "company": "Mylan",
+    "sideEffects": "Weight gain, increased blood sugar, mood swings, sleep disturbances, osteoporosis.",
+    "ageRange": "1-99 years",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Prednisone"],
+    "uses": ["Inflammation", "Allergies", "Asthma", "Autoimmune diseases"],
+    "warnings": "Long-term use can cause serious side effects like osteoporosis. Monitor blood sugar levels."
+  },
+  {
+    "_id": 16,
+    "name": "Sertraline",
+    "description": "Sertraline is an antidepressant in the selective serotonin reuptake inhibitor (SSRI) class. It is used to treat depression, anxiety disorders, panic attacks, and post-traumatic stress disorder (PTSD). By increasing serotonin levels in the brain, it helps improve mood and reduce anxiety.",
+    "company": "Pfizer",
+    "sideEffects": "Nausea, insomnia, sexual dysfunction, dizziness, weight gain.",
+    "ageRange": "18-99 years",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Sertraline hydrochloride"],
+    "uses": ["Depression", "Anxiety", "Panic attacks", "PTSD"],
+    "warnings": "May increase suicidal thoughts in young adults. Monitor for mood changes."
+  },
+  {
+    "_id": 17,
+    "name": "Hydrochlorothiazide",
+    "description": "Hydrochlorothiazide is a thiazide diuretic used to treat high blood pressure and edema caused by conditions such as heart failure or kidney disease. It works by increasing urination to help reduce fluid buildup in the body and lower blood pressure.",
+    "company": "Sanofi",
+    "sideEffects": "Dizziness, dehydration, electrolyte imbalances, rash.",
+    "ageRange": "18-99 years",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Hydrochlorothiazide"],
+    "uses": ["Hypertension", "Edema", "Heart failure"],
+    "warnings": "Monitor electrolyte levels, especially potassium. Not recommended for patients with kidney problems."
+  }
+]

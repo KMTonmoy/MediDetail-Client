@@ -13,9 +13,12 @@ const Services = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-4xl font-semibold text-green-700">Our Services</h2>
+          <h2 className="text-4xl font-semibold text-green-700">
+            Our Services
+          </h2>
           <p className="text-lg text-gray-600 mt-4">
-            We provide a wide range of medical services to help you live healthier and longer.
+            We provide a wide range of medical services to help you live
+            healthier and longer.
           </p>
         </motion.div>
 
@@ -30,9 +33,12 @@ const Services = () => {
           >
             <div className="text-center">
               <div className="text-green-700 text-3xl mb-4">🩺</div>
-              <h3 className="text-xl font-semibold text-gray-800">General Consultation</h3>
+              <h3 className="text-xl font-semibold text-gray-800">
+                General Consultation
+              </h3>
               <p className="text-gray-600 mt-4">
-                Our experienced doctors offer general consultation for various health issues, ensuring the best care.
+                Our experienced doctors offer general consultation for various
+                health issues, ensuring the best care.
               </p>
             </div>
           </motion.div>
@@ -46,9 +52,12 @@ const Services = () => {
           >
             <div className="text-center">
               <div className="text-green-700 text-3xl mb-4">💊</div>
-              <h3 className="text-xl font-semibold text-gray-800">Pharmacy Services</h3>
+              <h3 className="text-xl font-semibold text-gray-800">
+                Pharmacy Services
+              </h3>
               <p className="text-gray-600 mt-4">
-                We provide a wide variety of pharmaceutical services, including prescription medications and over-the-counter drugs.
+                We provide a wide variety of pharmaceutical services, including
+                prescription medications and over-the-counter drugs.
               </p>
             </div>
           </motion.div>
@@ -62,9 +71,12 @@ const Services = () => {
           >
             <div className="text-center">
               <div className="text-green-700 text-3xl mb-4">🏥</div>
-              <h3 className="text-xl font-semibold text-gray-800">Specialized Treatments</h3>
+              <h3 className="text-xl font-semibold text-gray-800">
+                Specialized Treatments
+              </h3>
               <p className="text-gray-600 mt-4">
-                Our specialists offer personalized treatments for specific conditions, ensuring effective solutions.
+                Our specialists offer personalized treatments for specific
+                conditions, ensuring effective solutions.
               </p>
             </div>
           </motion.div>
@@ -78,9 +90,12 @@ const Services = () => {
           >
             <div className="text-center">
               <div className="text-green-700 text-3xl mb-4">🧪</div>
-              <h3 className="text-xl font-semibold text-gray-800">Laboratory Services</h3>
+              <h3 className="text-xl font-semibold text-gray-800">
+                Laboratory Services
+              </h3>
               <p className="text-gray-600 mt-4">
-                We offer a range of lab services, from routine tests to specialized diagnostics, ensuring precise results.
+                We offer a range of lab services, from routine tests to
+                specialized diagnostics, ensuring precise results.
               </p>
             </div>
           </motion.div>
@@ -94,9 +109,12 @@ const Services = () => {
           >
             <div className="text-center">
               <div className="text-green-700 text-3xl mb-4">🩻</div>
-              <h3 className="text-xl font-semibold text-gray-800">Imaging Services</h3>
+              <h3 className="text-xl font-semibold text-gray-800">
+                Imaging Services
+              </h3>
               <p className="text-gray-600 mt-4">
-                Our state-of-the-art imaging services provide accurate results for diagnostics, including X-rays and MRIs.
+                Our state-of-the-art imaging services provide accurate results
+                for diagnostics, including X-rays and MRIs.
               </p>
             </div>
           </motion.div>
@@ -110,9 +128,12 @@ const Services = () => {
           >
             <div className="text-center">
               <div className="text-green-700 text-3xl mb-4">🧑‍⚕️</div>
-              <h3 className="text-xl font-semibold text-gray-800">Emergency Services</h3>
+              <h3 className="text-xl font-semibold text-gray-800">
+                Emergency Services
+              </h3>
               <p className="text-gray-600 mt-4">
-                Our 24/7 emergency services provide immediate care for critical medical conditions and emergencies.
+                Our 24/7 emergency services provide immediate care for critical
+                medical conditions and emergencies.
               </p>
             </div>
           </motion.div>

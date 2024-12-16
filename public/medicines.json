@@ -5,7 +5,7 @@
     "company": "Bristol-Myers Squibb",
     "sideEffects": "Nausea, stomach upset, liver damage (in case of overdose).",
     "ageRange": "1-99 years",
-    "image": "https://via.placeholder.com/150",
+    "image": "https://www.mccabespharmacy.com/cdn/shop/files/PfizerParacetamol500mgFilmCoatedTablets24Pack.jpg?v=1704467734",
     "ingredients": ["Acetaminophen"],
     "uses": [
       "Pain relief",
@@ -22,7 +22,7 @@
     "company": "Bayer",
     "sideEffects": "Gastrointestinal irritation, ulcers, bleeding, tinnitus.",
     "ageRange": "12-99 years",
-    "image": "https://via.placeholder.com/150",
+    "image": "https://5.imimg.com/data5/SELLER/Default/2023/7/330506870/UM/GZ/QO/135658020/aspirin-dispersible-tablets.jpg",
     "ingredients": ["Acetylsalicylic acid"],
     "uses": ["Pain relief", "Anti-inflammatory", "Antiplatelet therapy"],
     "warnings": "Not recommended for people with gastrointestinal problems, bleeding disorders, or allergies to NSAIDs."
@@ -33,7 +33,7 @@
     "company": "Pfizer",
     "sideEffects": "Gastrointestinal upset, stomach ulcers, kidney damage, fluid retention.",
     "ageRange": "6-99 years",
-    "image": "https://via.placeholder.com/150",
+    "image": "https://www.ashcroftpharmacy.co.uk/uploads/images/products/large/ashcroft-pharmacy-ibuprofen-400mg-tablets-24-tablets-1722352606Ibuprofen-400mg-Tablets.jpg",
     "ingredients": ["Ibuprofen"],
     "uses": [
       "Pain relief",
@@ -50,7 +50,7 @@
     "company": "GlaxoSmithKline",
     "sideEffects": "Nausea, vomiting, diarrhea, allergic reactions (rash, anaphylaxis).",
     "ageRange": "2-99 years",
-    "image": "https://via.placeholder.com/150",
+    "image": "https://www.bidrx.com/blog/wp-content/uploads/2023/06/BidRx-10.png",
     "ingredients": ["Amoxicillin"],
     "uses": [
       "Antibiotic for bacterial infections",
@@ -66,7 +66,7 @@
     "company": "Bayer",
     "sideEffects": "Nausea, diarrhea, tendonitis, dizziness, allergic reactions.",
     "ageRange": "18-99 years",
-    "image": "https://via.placeholder.com/150",
+    "image": "https://industry.pharmaceutical-tech.com/suppliers/fidson-healthcare-plc/products/ciprofloxacin-500-lg.jpg",
     "ingredients": ["Ciprofloxacin"],
     "uses": [
       "Bacterial infections",
@@ -82,7 +82,7 @@
     "company": "Bristol-Myers Squibb",
     "sideEffects": "Nausea, diarrhea, stomach upset, lactic acidosis (rare).",
     "ageRange": "10-99 years",
-    "image": "https://via.placeholder.com/150",
+    "image": "https://d5f8f0de.delivery.rocketcdn.me/wp-content/uploads/2024/06/metformin_denk.jpg",
     "ingredients": ["Metformin hydrochloride"],
     "uses": ["Type 2 diabetes management", "Blood sugar control"],
     "warnings": "Risk of lactic acidosis in people with kidney or liver issues. Take with food to reduce gastrointestinal upset."
@@ -93,7 +93,7 @@
     "company": "Pfizer",
     "sideEffects": "Muscle pain, liver dysfunction, gastrointestinal issues, headaches.",
     "ageRange": "18-99 years",
-    "image": "https://via.placeholder.com/150",
+    "image": "https://www.sterisonline.com/uploads/blog/main/STERISATORVASTATIN20_CAT_1691398553.png",
     "ingredients": ["Atorvastatin calcium"],
     "uses": [
       "Lower cholesterol",
@@ -108,7 +108,7 @@
     "company": "Merck & Co.",
     "sideEffects": "Dizziness, low blood pressure, high potassium levels, kidney dysfunction.",
     "ageRange": "18-99 years",
-    "image": "https://via.placeholder.com/150",
+    "image": "https://canadianinsulin.com/wp-content/uploads/2024/09/losartan.jpeg",
     "ingredients": ["Losartan potassium"],
     "uses": ["Hypertension", "Heart failure", "Kidney protection in diabetes"],
     "warnings": "Monitor kidney function and potassium levels. May cause dizziness when standing up quickly."
@@ -119,7 +119,7 @@
     "company": "AstraZeneca",
     "sideEffects": "Headache, diarrhea, nausea, abdominal pain, vitamin B12 deficiency (long-term use).",
     "ageRange": "18-99 years",
-    "image": "https://via.placeholder.com/150",
+    "image": "https://medsdirecttoyou.co.uk/wp-content/uploads/2023/05/Omeprazole.jpg",
     "ingredients": ["Omeprazole"],
     "uses": [
       "GERD",
@@ -135,7 +135,7 @@
     "company": "Merck & Co.",
     "sideEffects": "Cough, dizziness, elevated potassium levels, kidney problems.",
     "ageRange": "18-99 years",
-    "image": "https://via.placeholder.com/150",
+    "image": "data:image/jpeg;base64,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",
     "ingredients": ["Lisinopril"],
     "uses": [
       "Hypertension",
@@ -151,7 +151,7 @@
     "company": "AbbVie",
     "sideEffects": "Palpitations, insomnia, weight loss, anxiety, sweating.",
     "ageRange": "1-99 years",
-    "image": "https://via.placeholder.com/150",
+    "image": "data:image/jpeg;base64,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",
     "ingredients": ["Levothyroxine sodium"],
     "uses": ["Hypothyroidism", "Thyroid hormone replacement"],
     "warnings": "Adjust dosage carefully to avoid symptoms of hyperthyroidism."
@@ -162,7 +162,7 @@
     "company": "Sanofi-Aventis",
     "sideEffects": "Bleeding, bruising, rash, stomach pain.",
     "ageRange": "18-99 years",
-    "image": "https://via.placeholder.com/150",
+    "image": "https://media.post.rvohealth.io/wp-content/uploads/2020/09/Clopidogrel_Oral_Tablet-732x549-thumbnail.jpg",
     "ingredients": ["Clopidogrel bisulfate"],
     "uses": [
       "Blood clot prevention",
@@ -178,7 +178,7 @@
     "company": "Bristol-Myers Squibb",
     "sideEffects": "Dehydration, electrolyte imbalance, dizziness, low blood pressure.",
     "ageRange": "18-99 years",
-    "image": "https://via.placeholder.com/150",
+    "image": "https://healthtoinsurance.com/wp-content/uploads/2023/11/F-46HSvXMAAnaXS.jpg",
     "ingredients": ["Furosemide"],
     "uses": [
       "Fluid retention",
@@ -194,7 +194,7 @@
     "company": "Roche",
     "sideEffects": "Drowsiness, dizziness, tiredness, memory problems, addiction.",
     "ageRange": "18-99 years",
-    "image": "https://via.placeholder.com/150",
+    "image": "https://5.imimg.com/data5/SELLER/Default/2023/2/XP/KO/EM/38282849/valium-diazepam-packaging-type-box-dosage-10-mg.JPG",
     "ingredients": ["Diazepam"],
     "uses": ["Anxiety", "Muscle spasms", "Seizures", "Alcohol withdrawal"],
     "warnings": "Risk of dependence and overdose. Use for the shortest duration possible."
@@ -205,7 +205,7 @@
     "company": "Mylan",
     "sideEffects": "Weight gain, increased blood sugar, mood swings, sleep disturbances, osteoporosis.",
     "ageRange": "1-99 years",
-    "image": "https://via.placeholder.com/150",
+    "image": "https://www.israelpharm.com/wp-content/uploads/2020/08/IMG_1194.jpg",
     "ingredients": ["Prednisone"],
     "uses": ["Inflammation", "Allergies", "Asthma", "Autoimmune diseases"],
     "warnings": "Long-term use can cause serious side effects like osteoporosis. Monitor blood sugar levels."
@@ -216,7 +216,7 @@
     "company": "Pfizer",
     "sideEffects": "Nausea, insomnia, sexual dysfunction, dizziness, weight gain.",
     "ageRange": "18-99 years",
-    "image": "https://via.placeholder.com/150",
+    "image": "https://www.assetpharmacy.com/wp-content/uploads/2017/09/Sertraline-100mg-Tablets-28-Tablets-1200x900-cropped.jpg",
     "ingredients": ["Sertraline hydrochloride"],
     "uses": ["Depression", "Anxiety", "Panic attacks", "PTSD"],
     "warnings": "May increase suicidal thoughts in young adults. Monitor for mood changes."
@@ -227,7 +227,7 @@
     "company": "Sanofi",
     "sideEffects": "Dizziness, dehydration, electrolyte imbalances, rash.",
     "ageRange": "18-99 years",
-    "image": "https://via.placeholder.com/150",
+    "image": "https://www.emedbucket.com/emedpro_img/uploads/product/main/STERIS_PHARMA/1656157443_133303_0.jpg",
     "ingredients": ["Hydrochlorothiazide"],
     "uses": ["Hypertension", "Edema", "Heart failure"],
     "warnings": "Monitor electrolyte levels, especially potassium. Not recommended for patients with kidney problems."

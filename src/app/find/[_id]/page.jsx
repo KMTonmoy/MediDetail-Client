@@ -59,14 +59,24 @@ const MedicineDetailsPage = ({ params }) => {
         >
           {medicine.name}
         </motion.h1>
-        <motion.img
+        {/* <motion.img
           src={medicine.image}
           alt={medicine.name}
           className="w-full h-80 object-cover mb-6 rounded"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.7 }}
+        /> */}
+<motion.img
+          src={medicine.image}
+          alt={medicine.name}
+          className="w-full h-80 object-contain mb-6 rounded cursor-pointer"
+          onClick={() => setIsModalOpen(true)} // Open modal on click
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.7 }}
         />
+
         <motion.p
           className="text-gray-700 text-lg mb-4"
           initial={{ opacity: 0 }}
@@ -151,7 +161,7 @@ const MedicineDetailsPage = ({ params }) => {
             {new Date(medicine.date).toLocaleDateString()}
           </span>
         </motion.div>
-        <Link href="/medicines">
+        <Link href="/find">
           <motion.button
             className="mt-4 px-6 py-2 bg-green-500 text-white rounded-md hover:bg-green-700 transition duration-300"
             initial={{ scale: 0.8, opacity: 0 }}

@@ -14,7 +14,9 @@ const MedicinePage = () => {
   useEffect(() => {
     const fetchMedicines = async () => {
       try {
-        const response = await fetch("/medicines.json");
+        const response = await fetch(
+          "https://medi-detail-server.vercel.app/medicines"
+        );
         const data = await response.json();
         setMedicines(data);
         setFilteredMedicines(data.slice(0, visibleCount));

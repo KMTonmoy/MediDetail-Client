@@ -28,33 +28,40 @@ const Navbar = () => {
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           >
-            Home
+            <Link href="/">Home</Link>
           </motion.li>
           <motion.li
             className="hover:text-green-700 cursor-pointer"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           >
-            About
+            <Link href="/about">About</Link>
           </motion.li>
           <motion.li
             className="hover:text-green-700 cursor-pointer"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           >
-            Services
+            <Link href="/services">Services</Link>
           </motion.li>
           <motion.li
             className="hover:text-green-700 cursor-pointer"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           >
-            Contact
+            <Link href="/contact">Contact</Link>
+          </motion.li>
+          <motion.li
+            className="hover:text-green-700 cursor-pointer"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Link href="/find">Find Medicine</Link>
           </motion.li>
         </motion.ul>
 
         <div className="flex gap-5">
-          <Link href="register">
+          <Link href="/register">
             <motion.button
               className="hidden md:block bg-green-600 text-white px-6 py-2 rounded-full shadow-lg hover:bg-green-700 transition duration-300"
               whileHover={{ scale: 1.1 }}
@@ -98,30 +105,37 @@ const Navbar = () => {
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           >
-            Home
+            <Link href="/">Home</Link>
           </motion.li>
           <motion.li
             className="hover:text-green-700 cursor-pointer"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           >
-            About
+            <Link href="/about">About</Link>
           </motion.li>
           <motion.li
             className="hover:text-green-700 cursor-pointer"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           >
-            Services
+            <Link href="/services">Services</Link>
           </motion.li>
           <motion.li
             className="hover:text-green-700 cursor-pointer"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           >
-            Contact
+            <Link href="/contact">Contact</Link>
           </motion.li>
-          <Link href="register">
+          <motion.li
+            className="hover:text-green-700 cursor-pointer"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Link href="/Find">Find Medicine</Link>
+          </motion.li>
+          <Link href="/register">
             <motion.button
               className="bg-green-600 text-white px-6 py-2 rounded-full shadow-lg hover:bg-green-700 transition duration-300"
               whileHover={{ scale: 1.1 }}

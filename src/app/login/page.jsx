@@ -1,8 +1,66 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Swal from "sweetalert2";
 
 const LoginPage = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    if (!email || !password) {
+      return Swal.fire({
+        title: "Oops!",
+        text: "Please fill in both fields.",
+        icon: "error",
+        confirmButtonText: "Try Again",
+      });
+    }
+
+    try {
+      Swal.fire({
+        title: "Logging in...",
+        text: "Please wait while we process your login.",
+        icon: "info",
+        showConfirmButton: false,
+        allowOutsideClick: false,
+      });
+
+      const response = await fetch("http://localhost:8000/users/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (response.ok) {
+        Swal.fire({
+          title: "Success!",
+          text: "You are logged in.",
+          icon: "success",
+          confirmButtonText: "Continue",
+        });
+      } else {
+        Swal.fire({
+          title: "Error!",
+          text: "Invalid credentials. Please try again.",
+          icon: "error",
+          confirmButtonText: "Retry",
+        });
+      }
+    } catch (error) {
+      Swal.fire({
+        title: "Error!",
+        text: "Something went wrong. Please try again later.",
+        icon: "error",
+        confirmButtonText: "Retry",
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen py-10 flex flex-col items-center justify-center bg-gradient-to-r from-green-200 via-blue-200 to-purple-200">
       <motion.div
@@ -21,8 +79,8 @@ const LoginPage = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
         className="bg-white shadow-lg rounded-lg p-6 mt-8 w-11/12 max-w-md"
+        onSubmit={handleLogin}
       >
-        {/* Email Field */}
         <div className="mb-4">
           <label
             htmlFor="email"
@@ -35,9 +93,10 @@ const LoginPage = () => {
             id="email"
             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
             placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        {/* Password Field */}
         <div className="mb-4">
           <label
             htmlFor="password"
@@ -50,16 +109,16 @@ const LoginPage = () => {
             id="password"
             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
             placeholder="Enter your password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        {/* Login Button */}
         <motion.button
           whileHover={{ scale: 1.05 }}
           className="w-full bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition"
         >
           Login
         </motion.button>
-        {/* Forgot Password Link */}
         <p className="text-center text-gray-600 mt-4">
           Forgot your password?{" "}
           <a
@@ -69,7 +128,6 @@ const LoginPage = () => {
             Reset here
           </a>
         </p>
-        {/* No Account Link */}
         <p className="text-center text-gray-600 mt-2">
           Don't have an account?{" "}
           <a

@@ -67,7 +67,7 @@ const MedicineDetailsPage = ({ params }) => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.7 }}
         /> */}
-<motion.img
+        <motion.img
           src={medicine.image}
           alt={medicine.name}
           className="w-full h-80 object-contain mb-6 rounded cursor-pointer"

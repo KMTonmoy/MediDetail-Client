@@ -51,17 +51,15 @@ const RegisterPage = () => {
     }
 
     try {
-      // Upload profile image
+
       const imageUrl = await imageUpload(image);
-      
-      // Create the user with email and password
+
       await createUser(email, password);
-      
-      // Update the user profile with name and image
+
+
       await updateUserProfile(`${firstName} ${lastName}`, imageUrl);
 
-      // Save the user details in the backend (optional)
-      const userInfo = { email, name: `${firstName} ${lastName}`, phone };
+      const userInfo = { email, name: `${firstName} ${lastName}`, phone, imageUrl, password };
       await axiosPublic.post("/users", userInfo);
 
       Swal.fire({

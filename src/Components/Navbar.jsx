@@ -60,6 +60,17 @@ const Navbar = () => {
           >
             <Link href="/find">Find Medicine</Link>
           </motion.li>
+          {
+            user && (
+              <motion.li
+                className="hover:text-green-700 cursor-pointer"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Link href="/dashboard">Dashboard</Link>
+              </motion.li>
+            )
+          }
         </motion.ul>
 
         <div className="flex gap-5">

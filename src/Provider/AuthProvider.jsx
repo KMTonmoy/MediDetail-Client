@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { createContext, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
@@ -106,7 +106,7 @@ const AuthProvider = ({ children }) => {
         email: user?.email,
         name: user?.displayName,
         photo: user?.photoURL,
-        role: "user",
+        role: "user",  // You can adjust the default role based on your system
       };
       const { data } = await axios.put(
         `http://localhost:8000/user`,
@@ -123,14 +123,14 @@ const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       setUser(currentUser);
       if (currentUser) {
+        // Delay the saveUser function by 6 seconds
         setTimeout(async () => {
           try {
             await saveUser(currentUser);
           } catch (error) {
             console.error("Error handling auth state change:", error);
           }
-        }, 5000);
-      } else {
+        }, 6000); // 6 seconds delay
       }
       setLoading(false);
     });

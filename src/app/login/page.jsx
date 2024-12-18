@@ -1,7 +1,11 @@
-"use client";
+'use client';
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Swal from "sweetalert2";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { app } from "../../firebase/firebase.config";
+
+const auth = getAuth(app);
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -28,33 +32,23 @@ const LoginPage = () => {
         allowOutsideClick: false,
       });
 
-      const response = await fetch("http://localhost:8000/users/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
+      const response = await signInWithEmailAndPassword(auth, email, password);
 
-      if (response.ok) {
+      if (response.user) {
         Swal.fire({
           title: "Success!",
           text: "You are logged in.",
           icon: "success",
           confirmButtonText: "Continue",
-        });
-      } else {
-        Swal.fire({
-          title: "Error!",
-          text: "Invalid credentials. Please try again.",
-          icon: "error",
-          confirmButtonText: "Retry",
+        }).then(() => {
+          // Redirect to home page or dashboard
+          window.location.href = "/";  // Adjust this route as needed
         });
       }
     } catch (error) {
       Swal.fire({
         title: "Error!",
-        text: "Something went wrong. Please try again later.",
+        text: error.message || "Invalid credentials. Please try again.",
         icon: "error",
         confirmButtonText: "Retry",
       });

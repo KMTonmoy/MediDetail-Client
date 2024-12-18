@@ -7,7 +7,7 @@ const MedicinePage = () => {
   const [medicines, setMedicines] = useState([]);
   const [filteredMedicines, setFilteredMedicines] = useState([]);
   const [search, setSearch] = useState("");
-  const [isGrid, setIsGrid] = useState(true);
+  const [isGrid, setIsGrid] = useState(window.innerWidth < 768);
   const [visibleCount, setVisibleCount] = useState(9);
   const [isSearchActive, setIsSearchActive] = useState(false);
 
@@ -25,6 +25,13 @@ const MedicinePage = () => {
       }
     };
     fetchMedicines();
+
+    const updateView = () => {
+      setIsGrid(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", updateView);
+    return () => window.removeEventListener("resize", updateView);
   }, [visibleCount]);
 
   const handleSearch = () => {
@@ -81,39 +88,82 @@ const MedicinePage = () => {
             {isGrid ? "List View" : "Grid View"}
           </button>
         </div>
-        <motion.div
-          className={`grid ${
-            isGrid ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3" : "grid-cols-1"
-          } gap-6`}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          {filteredMedicines.map((medicine) => (
-            <motion.div
-              key={medicine._id}
-              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300"
-              whileHover={{ scale: 1.05 }}
-            >
-              <img
-                src={medicine.image}
-                alt={medicine.name}
-                className="w-full h-40 object-cover rounded-lg mb-4"
-              />
-              <h3 className="text-lg font-semibold text-gray-800">
-                {medicine.name}
-              </h3>
-              <p className="text-gray-600 mb-4 line-clamp-2">
-                {medicine.description}
-              </p>
-              <a href={`/find/${medicine._id}`}>
-                <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition duration-300">
-                  Details
-                </button>
-              </a>
-            </motion.div>
-          ))}
-        </motion.div>
+
+        {isGrid ? (
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            {filteredMedicines.map((medicine) => (
+              <motion.div
+                key={medicine._id}
+                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+                whileHover={{ scale: 1.05 }}
+              >
+                <img
+                  src={medicine.image}
+                  alt={medicine.name}
+                  className="w-full h-40 object-cover rounded-lg mb-4"
+                />
+                <h3 className="text-lg font-semibold text-gray-800">
+                  {medicine.name}
+                </h3>
+                <p className="text-gray-600 mb-4 line-clamp-2">
+                  {medicine.description}
+                </p>
+                <a href={`/find/${medicine._id}`}>
+                  <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition duration-300">
+                    Details
+                  </button>
+                </a>
+              </motion.div>
+            ))}
+          </motion.div>
+        ) : (
+          <motion.table
+            className="w-full bg-white rounded-lg shadow-lg overflow-hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <thead className="bg-green-600 text-white">
+              <tr>
+                <th className="px-6 py-4 text-left">Image</th>
+                <th className="px-6 py-4 text-left">Name</th>
+                <th className="px-6 py-4 text-left">Age Range</th>
+                <th className="px-6 py-4 text-left">Company</th>
+                <th className="px-6 py-4 text-left">Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              {filteredMedicines.map((medicine) => (
+                <tr key={medicine._id} className="hover:bg-gray-100">
+                  <td className="px-6 py-4">
+                    <img
+                      src={medicine.image}
+                      alt={medicine.name}
+                      className="w-16 h-16 object-cover rounded-lg"
+                    />
+                  </td>
+                  <td className="px-6 py-4">{medicine.name}</td>
+                  <td className="px-6 py-4">{medicine.ageRange}</td>
+                  <td className="px-6 py-4">{medicine.company}</td>
+                  <td className="px-6 py-4">
+                    <a
+                      href={`/find/${medicine._id}`}
+                      className="text-green-600 hover:underline"
+                    >
+                      View Details
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </motion.table>
+        )}
+
         {filteredMedicines.length === 0 && (
           <div className="text-center text-gray-600 mt-10">
             <p>No medicines found. Try searching for something else.</p>

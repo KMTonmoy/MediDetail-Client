@@ -1,7 +1,7 @@
 'use client';
-import React, { useState, useEffect, useContext } from 'react';
 import { motion } from 'framer-motion';
-import { FaTimes, FaBars } from 'react-icons/fa';
+import React, { useContext, useEffect, useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import { AuthContext } from '../Provider/AuthProvider';
 
 const Sidebar = () => {
@@ -13,7 +13,7 @@ const Sidebar = () => {
 
     useEffect(() => {
         if (email) {
-            fetch(`http://localhost:8000/users/${email}`)
+            fetch(`https://medidetailapi.vercel.app/users/${email}`)
                 .then((res) => res.json())
                 .then(setData);
         }

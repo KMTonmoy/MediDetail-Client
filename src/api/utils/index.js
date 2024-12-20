@@ -11,4 +11,4 @@ export const imageUpload = async (image) => {
   );
 
   return data.data.display_url;
-};
+}; 

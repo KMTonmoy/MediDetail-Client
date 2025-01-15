@@ -1,30 +1,16 @@
-// import React from 'react';
-// import Script from 'next/script';
+"use client";
 
-// const AdSense = ({ pId }) => {
-//     return (
-//         <div>
-//             <Script
-//                 async
-//                 src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1157339341225906`}
-//                 crossOrigin="anonymous"
-//                 strategy="afterInteractive"
-//             />
-//         </div>
-//     );
-// };
-
-// export default AdSense;
-
-"use client"
 import React, { useEffect } from "react";
+import dynamic from "next/dynamic";
 
 const AdSense = () => {
     useEffect(() => {
-        try {
-            (window.adsbygoogle = window.adsbygoogle || []).push({});
-        } catch (e) {
-            console.error("AdSense error:", e);
+        if (typeof window !== "undefined" && window.adsbygoogle) {
+            try {
+                (window.adsbygoogle = window.adsbygoogle || []).push({});
+            } catch (e) {
+                console.error("AdSense error:", e);
+            }
         }
     }, []);
 
@@ -47,4 +33,4 @@ const AdSense = () => {
     );
 };
 
-export default AdSense;
+export default dynamic(() => Promise.resolve(AdSense), { ssr: false });

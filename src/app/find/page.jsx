@@ -7,7 +7,7 @@ const MedicinePage = () => {
   const [medicines, setMedicines] = useState([]);
   const [filteredMedicines, setFilteredMedicines] = useState([]);
   const [search, setSearch] = useState("");
-  const [isGrid, setIsGrid] = useState(window.innerWidth < 768);
+  const [isGrid, setIsGrid] = useState(false);
   const [visibleCount, setVisibleCount] = useState(9);
   const [isSearchActive, setIsSearchActive] = useState(false);
 
@@ -30,6 +30,7 @@ const MedicinePage = () => {
       setIsGrid(window.innerWidth < 768);
     };
 
+    updateView();
     window.addEventListener("resize", updateView);
     return () => window.removeEventListener("resize", updateView);
   }, [visibleCount]);
@@ -84,7 +85,7 @@ const MedicinePage = () => {
             onClick={() => setIsGrid(!isGrid)}
             className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition duration-300 flex items-center gap-2"
           >
-            {isGrid ? <FaList /> : <FaThLarge />}{" "}
+            {isGrid ? <FaList /> : <FaThLarge />}
             {isGrid ? "List View" : "Grid View"}
           </button>
         </div>

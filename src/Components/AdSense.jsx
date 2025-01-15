@@ -16,11 +16,6 @@ const AdSense = () => {
 
     return (
         <div style={{ width: "100%", maxWidth: "1000px", minWidth: "250px" }}>
-            <script
-                async
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1157339341225906"
-                crossOrigin="anonymous"
-            ></script>
             <ins
                 className="adsbygoogle"
                 style={{ display: "block" }}

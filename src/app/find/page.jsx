@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { FaSearch, FaList, FaThLarge } from "react-icons/fa";
+import React, { useEffect, useState } from "react";
+import { FaList, FaSearch, FaThLarge } from "react-icons/fa";
 
 const MedicinePage = () => {
   const [medicines, setMedicines] = useState([]);
@@ -15,7 +15,7 @@ const MedicinePage = () => {
     const fetchMedicines = async () => {
       try {
         const response = await fetch(
-          "https://medi-detail-server.vercel.app/medicines"
+          "http://localhost:8000/medicines"
         );
         const data = await response.json();
         setMedicines(data);

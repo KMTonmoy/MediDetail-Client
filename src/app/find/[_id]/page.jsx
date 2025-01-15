@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
 
 const MedicineDetailsPage = ({ params }) => {
   const { _id } = params;
@@ -13,7 +13,7 @@ const MedicineDetailsPage = ({ params }) => {
     const fetchMedicineData = async () => {
       try {
         const response = await fetch(
-          `https://medi-detail-server.vercel.app/medicines/${_id}`
+          `http://localhost:8000/medicines/${_id}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch medicine details");

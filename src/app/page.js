@@ -19,7 +19,7 @@ const page = () => {
 
 
         <Banner></Banner>
-        <div className="flex justify-center mt-5 items-center gap-4">
+        <div className="flex w-full justify-center mt-5 items-center gap-4">
           <div>
             <h1>Google Adsense</h1>
             <AdBanner />
@@ -31,11 +31,11 @@ const page = () => {
         <AboutSection />
         <GallerySection />
         <TestimonialsSection />
-        <div className="flex justify-center items-center gap-4">
+        <div className="flex w-full justify-center items-center gap-4">
           <div>
             <h1>Google Adsense</h1>
-            <AdSense />
-
+            <AdSense />  
+    
           </div>
         </div>
         <FAQsSection />

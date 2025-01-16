@@ -33,8 +33,10 @@ const AdBanner = () => {
                 data-ad-format="fluid"
                 data-ad-layout-key="-fb+5w+4e-db+86"
             ></ins>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1157339341225906"
+                crossorigin="anonymous"></script>
         </div>
     );
 };
 
- export default dynamic(() => Promise.resolve(AdBanner), { ssr: false });
+export default dynamic(() => Promise.resolve(AdBanner), { ssr: false });

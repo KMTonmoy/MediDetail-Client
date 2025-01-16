@@ -21,7 +21,7 @@ const page = () => {
         <Banner></Banner>
         <div className="flex w-full justify-center mt-5 items-center gap-4">
           <div>
-            <h1>Google Adsense</h1>
+            {/* <h1>Google Adsense</h1> */}
             <AdBanner />
 
           </div>
@@ -33,9 +33,9 @@ const page = () => {
         <TestimonialsSection />
         <div className="flex w-full justify-center items-center gap-4">
           <div>
-            <h1>Google Adsense</h1>
-            <AdSense />  
-    
+            {/* <h1>Google Adsense</h1> */}
+            <AdSense />
+
           </div>
         </div>
         <FAQsSection />

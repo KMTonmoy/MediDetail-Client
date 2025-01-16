@@ -5,6 +5,7 @@ import {
   createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
+  sendSignInLinkToEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
@@ -59,16 +60,17 @@ const AuthProvider = ({ children }) => {
       console.error("Error signing in with Google:", error);
       throw error;
     } finally {
-      setLoading(false);
+      setLoading(false);     
     }
-  };
-
+  };         
+   
+  
   const logOut = async () => {
     setLoading(true);
     try {
-      await axios.get(`https://medidetailapi.vercel.app/logout`, {
+      await axios.get(`http://localhost:8000/logout`, {    
         withCredentials: true,
-      });
+      });        
       await signOut(auth);
       router.push("/login");
     } catch (error) {
@@ -94,7 +96,7 @@ const AuthProvider = ({ children }) => {
   const saveUser = async (user) => {
     try {
       const existingUserResponse = await axios.get(
-        `https://medidetailapi.vercel.app/users/${user?.email}`
+        `http://localhost:8000/users/${user?.email}`
       );
       const existingUser = existingUserResponse.data;
 
@@ -109,7 +111,7 @@ const AuthProvider = ({ children }) => {
         role: "user",  // You can adjust the default role based on your system
       };
       const { data } = await axios.put(
-        `https://medidetailapi.vercel.app/user`,
+        `http://localhost:8000/user`,
         currentUser
       );
       return data;

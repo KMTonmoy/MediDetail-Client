@@ -8,7 +8,7 @@ const Banner = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("/banner.json");
+      const response = await fetch("http://localhost:8000/getbanners");
       const data = await response.json();
       setSlides(data);
     };

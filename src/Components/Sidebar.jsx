@@ -13,7 +13,7 @@ const Sidebar = () => {
 
     useEffect(() => {
         if (email) {
-            fetch(`https://medidetailapi.vercel.app/users/${email}`)
+            fetch(`http://localhost:8000/users/${email}`)
                 .then((res) => res.json())
                 .then(setData);
         }

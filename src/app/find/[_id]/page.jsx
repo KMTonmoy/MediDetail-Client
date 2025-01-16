@@ -59,16 +59,10 @@ const MedicineDetailsPage = ({ params }) => {
         >
           {medicine.name}
         </motion.h1>
-        {/* <motion.img
-          src={medicine.image}
-          alt={medicine.name}
-          className="w-full h-80 object-cover mb-6 rounded"
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.7 }}
-        /> */}
+
+        {/* Image with fallback */}
         <motion.img
-          src={medicine.image}
+          src={medicine.image || '/path/to/placeholder-image.jpg'}
           alt={medicine.name}
           className="w-full h-80 object-contain mb-6 rounded cursor-pointer"
           onClick={() => setIsModalOpen(true)} // Open modal on click
@@ -85,6 +79,8 @@ const MedicineDetailsPage = ({ params }) => {
         >
           <strong>Description:</strong> {medicine.description}
         </motion.p>
+
+        {/* Company and Age Range */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <motion.div
             className="p-4 bg-gray-100 rounded-lg shadow-lg hover:shadow-2xl transition duration-300"
@@ -103,6 +99,8 @@ const MedicineDetailsPage = ({ params }) => {
             <strong>Age Range:</strong> {medicine.ageRange}
           </motion.div>
         </div>
+
+        {/* Ingredients and Uses */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <motion.div
             className="p-4 bg-gray-100 rounded-lg shadow-lg hover:bg-green-100 transition duration-300"
@@ -112,9 +110,11 @@ const MedicineDetailsPage = ({ params }) => {
           >
             <strong>Ingredients:</strong>
             <ul className="list-disc pl-5">
-              {medicine.ingredients.map((ingredient, index) => (
-                <li key={index}>{ingredient}</li>
-              ))}
+              {Array.isArray(medicine.ingredients)
+                ? medicine.ingredients.map((ingredient, index) => (
+                    <li key={index}>{ingredient}</li>
+                  ))
+                : medicine.ingredients && <li>{medicine.ingredients}</li>}
             </ul>
           </motion.div>
           <motion.div
@@ -125,12 +125,14 @@ const MedicineDetailsPage = ({ params }) => {
           >
             <strong>Uses:</strong>
             <ul className="list-disc pl-5">
-              {medicine.uses.map((use, index) => (
-                <li key={index}>{use}</li>
-              ))}
+              {Array.isArray(medicine.uses)
+                ? medicine.uses.map((use, index) => <li key={index}>{use}</li>)
+                : medicine.uses && <li>{medicine.uses}</li>}
             </ul>
           </motion.div>
         </div>
+
+        {/* Warnings and Side Effects */}
         <motion.p
           className="text-lg font-bold text-red-500 mb-4"
           initial={{ opacity: 0 }}
@@ -147,6 +149,8 @@ const MedicineDetailsPage = ({ params }) => {
         >
           <strong>Side Effects:</strong> {medicine.sideEffects}
         </motion.p>
+
+        {/* Published Info */}
         <motion.div
           className="flex justify-between items-center mt-6"
           initial={{ opacity: 0 }}
@@ -158,9 +162,11 @@ const MedicineDetailsPage = ({ params }) => {
           </span>
           <span className="text-sm text-gray-500">
             <strong>Published on:</strong>{" "}
-            {new Date(medicine.date).toLocaleDateString()}
+            {new Date(medicine.timestamp).toLocaleDateString()}
           </span>
         </motion.div>
+
+        {/* Back to Medicine List Button */}
         <Link href="/find">
           <motion.button
             className="mt-4 px-6 py-2 bg-green-500 text-white rounded-md hover:bg-green-700 transition duration-300"

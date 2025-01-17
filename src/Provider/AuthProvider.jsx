@@ -68,7 +68,7 @@ const AuthProvider = ({ children }) => {
   const logOut = async () => {
     setLoading(true);
     try {
-      await axios.get(`http://localhost:8000/logout`, {    
+      await axios.get(`https://mediserver.vercel.app/logout`, {    
         withCredentials: true,
       });        
       await signOut(auth);
@@ -96,7 +96,7 @@ const AuthProvider = ({ children }) => {
   const saveUser = async (user) => {
     try {
       const existingUserResponse = await axios.get(
-        `http://localhost:8000/users/${user?.email}`
+        `https://mediserver.vercel.app/users/${user?.email}`
       );
       const existingUser = existingUserResponse.data;
 
@@ -111,7 +111,7 @@ const AuthProvider = ({ children }) => {
         role: "user",  // You can adjust the default role based on your system
       };
       const { data } = await axios.put(
-        `http://localhost:8000/user`,
+        `https://mediserver.vercel.app/user`,
         currentUser
       );
       return data;

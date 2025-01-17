@@ -12,9 +12,9 @@ export default function RootLayout({ children }) {
                     <meta name="description" content="Your app description here" />
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
-                <div className="flex max-h-screen">
+                <div className="flex max-h-screen overflow-auto">
                     <Sidebar />
-                    <main className="flex     justify-center w-full">
+                    <main className="flex   max-h-screen overflow-auto  justify-center w-full">
                         {children}
 
                     </main>

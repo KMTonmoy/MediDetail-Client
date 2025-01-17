@@ -37,4 +37,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 
 
-<!-- Server : http://localhost:8000 -->
+<!-- Server : https://mediserver.vercel.app -->

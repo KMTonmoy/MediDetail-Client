@@ -13,7 +13,7 @@ const Sidebar = () => {
 
     useEffect(() => {
         if (email) {
-            fetch(`http://localhost:8000/users/${email}`)
+            fetch(`https://mediserver.vercel.app/users/${email}`)
                 .then((res) => res.json())
                 .then(setData);
         }
@@ -98,6 +98,11 @@ const Sidebar = () => {
                                 Add Medicine
                             </a>
                         </li>
+                        <li className="hover:translate-x-2 transform transition-all duration-300">
+                            <a href="/dashboard/MyMedicines" className="block text-lg font-semibold">
+                                My Medicines
+                            </a>
+                        </li>
 
                         {role === 'agent' && (
                             <li className="hover:translate-x-2 transform transition-all duration-300">
@@ -125,8 +130,13 @@ const Sidebar = () => {
                                     </a>
                                 </li>
                                 <li className="hover:translate-x-2 transform transition-all duration-300">
-                                    <a href="/dashboard/Customize Banner" className="block text-lg font-semibold">
+                                    <a href="/dashboard/CustomizeBanner" className="block text-lg font-semibold">
                                         Customize Banner
+                                    </a>
+                                </li>
+                                <li className="hover:translate-x-2 transform transition-all duration-300">
+                                    <a href="/dashboard/ManageMedicines" className="block text-lg font-semibold">
+                                        Manage Medicines
                                     </a>
                                 </li>
                             </>

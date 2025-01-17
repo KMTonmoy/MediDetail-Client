@@ -1,14 +1,14 @@
 "use client";
-import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";  
+import React, { useEffect, useState } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 const Banner = () => {
   const [slides, setSlides] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:8000/getbanners");
+      const response = await fetch("https://mediserver.vercel.app/banners");
       const data = await response.json();
       setSlides(data);
     };

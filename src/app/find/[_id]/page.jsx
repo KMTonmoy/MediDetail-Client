@@ -13,7 +13,7 @@ const MedicineDetailsPage = ({ params }) => {
     const fetchMedicineData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8000/medicines/${_id}`
+          `https://mediserver.vercel.app/medicines/${_id}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch medicine details");

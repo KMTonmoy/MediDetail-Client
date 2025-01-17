@@ -15,7 +15,7 @@ const MedicinePage = () => {
     const fetchMedicines = async () => {
       try {
         const response = await fetch(
-          "http://localhost:8000/medicines"
+          "https://mediserver.vercel.app/medicines"
         );
         const data = await response.json();
         setMedicines(data);

@@ -18,7 +18,7 @@ const ProfilePage = () => {
 
     useEffect(() => {
         if (email) {
-            fetch(`http://localhost:8000/users/${email}`)
+            fetch(`https://mediserver.vercel.app/users/${email}`)
                 .then((res) => res.json())
                 .then((userData) => {
                     setData(userData);

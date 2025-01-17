@@ -1,5 +1,6 @@
-'use client'
+'use client';
 import React, { useContext, useState } from 'react';
+import { toast } from 'react-hot-toast';
 import { imageUpload } from '../../../api/utils';
 import { AuthContext } from '../../../Provider/AuthProvider';
 
@@ -16,6 +17,8 @@ const MedicinePage = () => {
     warnings: '',
   });
 
+  const [loading, setLoading] = useState(false);
+  const [uploading, setUploading] = useState(false); // State for controlling uploading message
   const { user } = useContext(AuthContext);
 
   const handleChange = (e) => {
@@ -39,14 +42,16 @@ const MedicinePage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setUploading(true); // Show uploading message
 
     const medicineData = {
       ...medicine,
-      userId: user?._id,
+      userEmail: user?.email,
     };
 
     try {
-      const response = await fetch('http://localhost:8000/medicinespost', {
+      const response = await fetch('https://mediserver.vercel.app/medicinespost', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -55,24 +60,32 @@ const MedicinePage = () => {
       });
 
       if (response.ok) {
-        alert('Medicine added successfully!');
-        setMedicine({
-          name: '',
-          description: '',
-          company: '',
-          sideEffects: '',
-          ageRange: '',
-          image: '',
-          ingredients: '',
-          uses: '',
-          warnings: '',
-        });
+        // Delay for 5 seconds before showing success
+        setTimeout(() => {
+          toast.success('Medicine added successfully!');
+          setMedicine({
+            name: '',
+            description: '',
+            company: '',
+            sideEffects: '',
+            ageRange: '',
+            image: '',
+            ingredients: '',
+            uses: '',
+            warnings: '',
+          });
+          setUploading(false); // Hide uploading message after success
+        }, 5000);
       } else {
-        alert('Error adding medicine.');
+        toast.error('Error adding medicine.');
+        setUploading(false); // Hide uploading message if error occurs
       }
     } catch (error) {
       console.error('Error:', error);
-      alert('An error occurred.');
+      toast.error('An error occurred.');
+      setUploading(false); // Hide uploading message in case of error
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -84,7 +97,6 @@ const MedicinePage = () => {
         </h1>
 
         <form onSubmit={handleSubmit}>
-          {/* Name */}
           <div className="mb-4">
             <label htmlFor="name" className="block text-gray-700">
               Medicine Name
@@ -100,7 +112,6 @@ const MedicinePage = () => {
             />
           </div>
 
-          {/* Description */}
           <div className="mb-4">
             <label htmlFor="description" className="block text-gray-700">
               Description
@@ -115,7 +126,6 @@ const MedicinePage = () => {
             />
           </div>
 
-          {/* Company & Side Effects */}
           <div className="flex gap-5">
             <div className="mb-4 w-1/2">
               <label htmlFor="company" className="block text-gray-700">
@@ -148,7 +158,6 @@ const MedicinePage = () => {
             </div>
           </div>
 
-          {/* Age Range & Image Upload */}
           <div className="flex gap-5">
             <div className="mb-4 w-1/2">
               <label htmlFor="ageRange" className="block text-gray-700">
@@ -179,7 +188,6 @@ const MedicinePage = () => {
             </div>
           </div>
 
-          {/* Ingredients */}
           <div className="mb-4">
             <label htmlFor="ingredients" className="block text-gray-700">
               Ingredients
@@ -195,7 +203,6 @@ const MedicinePage = () => {
             />
           </div>
 
-          {/* Uses */}
           <div className="mb-4">
             <label htmlFor="uses" className="block text-gray-700">
               Uses
@@ -211,7 +218,6 @@ const MedicinePage = () => {
             />
           </div>
 
-          {/* Warnings */}
           <div className="mb-4">
             <label htmlFor="warnings" className="block text-gray-700">
               Warnings
@@ -231,8 +237,16 @@ const MedicinePage = () => {
             <button
               type="submit"
               className="w-full p-3 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
+              disabled={loading}
             >
-              Add Medicine
+              {uploading ? (
+                <div className="flex justify-center items-center">
+                  <div className="animate-spin border-4 border-t-transparent border-indigo-600 w-6 h-6 rounded-full"></div>
+                  <span className="ml-2">Uploading...</span>
+                </div>
+              ) : (
+                'Add Medicine'
+              )}
             </button>
           </div>
         </form>
